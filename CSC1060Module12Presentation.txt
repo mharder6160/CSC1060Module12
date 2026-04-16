@@ -1,0 +1,78 @@
+Java Hangman Game
+	CSC 1060 Module 12 Programming Project
+	Chapters 1 through 10 and 12
+
+Overview of the Hangman Game
+	Write a Hangman game in Java
+	Program randomly selects a word for the user to guess
+	Words are stored in a file named hangman.txt
+	Words may be of varying lengths
+	Game continues until the user chooses to stop
+
+Reading Words from a File
+	When the program starts, read all words from hangman.txt into an array
+	Only use the filename hangman.txt in code -- no directory paths
+	Program must handle missing hangman.txt file gracefully
+	Display an appropriate error message if the file is not found
+		Example: "Error: hangman.txt file NOT found."
+
+Game Play -- Each Round
+	Randomly choose a word from the array
+	Display the word as a series of asterisks (*), one for each letter
+	Prompt the user to guess one letter at a time
+	If the guess is correct, reveal the letter(s) in the word
+	If the guess is incorrect, count it as a miss
+	After the word is guessed, display the number of missed guesses
+	Ask if the user would like to play another round with a new word
+
+Input Validation
+	Only accept single letters (no numbers or special characters)
+	Limit the number of incorrect guesses allowed per word
+	Notify the user if a letter has already been guessed
+		Whether or not the letter is in the word
+
+Sample Output -- Normal Game Play
+	Word: *****
+	Misses: 0
+	Guessed letters:
+	Guess a letter: a
+	"a" is not in the word.
+	Word: *****
+	Misses: 1
+	Guessed letters: a
+	Guess a letter: o
+	Good guess!
+	Word: *o***
+	Misses: 1
+	Guessed letters: a o
+
+Completing the Game
+	Congratulations! You guessed the word: world
+	Total misses: 3
+	Do you want to play again? (y/n): n
+	Thank you for playing!
+
+Test Case 1 -- Normal Game Play
+	The hangman.txt file is present and contains words
+	The program should play a regular game of Hangman with the user
+	Verify correct letters are revealed in the proper positions
+	Verify misses are counted accurately
+	Verify guessed letters are tracked and displayed
+
+Test Case 2 -- Missing File
+	The hangman.txt file is missing, renamed, or deleted before running
+	The program should display an error message and exit
+	Sample output:
+		Error: hangman.txt file NOT found.
+
+Design and Implementation Requirements
+	Create and upload your own hangman.txt file with the project
+	Use an array to store the words read from the file
+	Randomly select a word each round
+	Track guessed letters and miss count
+	Validate all user input
+
+Grading
+	Project is worth 65 points
+	Refer to the grading rubric for point distribution details
+	If the program does not compile or run, credit may not be received for some rubric criteria
