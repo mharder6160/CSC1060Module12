@@ -1,0 +1,224 @@
+{\rtf1\ansi\ansicpg1252
+{\fonttbl
+{\f1\fnil\fcharset0\fprq0 Arial;}
+{\f2\fnil\fcharset0\fprq0 Times New Roman;}
+{\f3\fnil\fcharset0\fprq0 Verdana;}
+{\f4\fnil\fcharset0\fprq0 Courier New;}
+}
+{\colortbl;
+\red0\green127\blue163;
+\red0\green0\blue0;
+\red0\green32\blue96;
+\red0\green0\blue255;
+}
+{\stylesheet
+{\s1\loch\af1\dbch\f1\fs32\cf2\lang1033\level1 heading 1;}
+{\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\level2 heading 2;}
+{\s3\li1440\loch\af1\dbch\f1\fs28\cf2\lang1033\level3 heading 3;}
+{\s4\li2160\loch\af1\dbch\f1\fs28\cf2\lang1033\level4 heading 4;}
+{\s5\li2880\loch\af1\dbch\f1\fs28\cf2\lang1033\level5 heading 5;}
+{\s6\li3600\loch\af1\dbch\f1\fs28\cf2\lang1033\level6 heading 6;}
+{\s7\li4320\loch\af1\dbch\f1\fs28\cf2\lang1033\level7 heading 7;}
+{\s8\li5040\loch\af1\dbch\f1\fs28\cf2\lang1033\level8 heading 8;}
+{\s9\li5760\loch\af1\dbch\f1\fs28\cf2\lang1033\level9 heading 9;}
+}
+\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs60\cf1 Introduction to Java Programming and Data Structures\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs40\cf1 Thirteenth Edition\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\qc {\b\dbch\af1\loch\f1\fs60 Chapter 12\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\qc {\dbch\af1\loch\f1\fs44 Exception Handling and Text I}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs44 O\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\qr {\dbch\af3\loch\f3\fs24 Copyright \'a9 }{\dbch\af3\loch\f3\fs24 2024 }{\dbch\af3\loch\f3\fs24 Pearson Education, Inc. All Rights Reserved\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Motivations\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 When a program runs into a runtime error, the program terminates abnormally. How can you handle the runtime error so that the program can continue to run or terminate gracefully? This is the subject we will introduce in this chapter.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Exception Types\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 System Errors}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Exceptions}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Runtime Exceptions}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs64\cf1 Checked Exceptions v}{\b\dbch\af1\loch\f1\fs2\cf1 erersusu}{\b\dbch\af1\loch\f1\fs64\cf1 s Unchecked Exceptions\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f4\fs48 RuntimeException}{\dbch\af1\loch\f1\fs48 , }{\b\dbch\af1\loch\f4\fs48 Error}{\dbch\af1\loch\f1\fs48  and their subclasses are known as }{\b\dbch\af1\loch\f1\fs48 unchecked exceptions}{\dbch\af1\loch\f1\fs48 . All other exceptions are known as }{\b\dbch\af1\loch\f1\fs48 checked exceptions}{\dbch\af1\loch\f1\fs48 , meaning that the compiler forces the programmer to check and deal with the exceptions.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Unchecked Exceptions }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 In most cases, unchecked exceptions reflect programming logic errors that are not recoverable. For example, a }{\b\dbch\af1\loch\f4\fs48 NullPointerException}{\dbch\af1\loch\f1\fs48  is thrown if you access an object through a reference variable before an object is assigned to it; an }{\b\dbch\af1\loch\f4\fs48 IndexOutOfBoundsException}{\dbch\af1\loch\f1\fs48  is thrown if you access an element in an array outside the bounds of the array. These are the logic errors that should be corrected in the program. Unchecked exceptions can occur anywhere in the program. To avoid cumbersome overuse of try-catch blocks, Java does not mandate you to write code to catch unchecked exceptions.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Unchecked Exceptions }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs64\cf1 Declaring, Throwing, and Catching Exceptions}{\b\dbch\af1\loch\f1\fs64\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Declaring Exceptions\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Every method must state the types of checked exceptions it might throw. This is known as }{\b\dbch\af1\loch\f1\fs48 declaring exceptions}{\dbch\af1\loch\f1\fs48 .\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f4\fs48 public void myMethod()\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi293 {\dbch\af1\loch\f4\fs48 throws IOException\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f4\fs48 public void myMethod()\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi293 {\dbch\af1\loch\f4\fs48 throws IOException, OtherException\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Throwing Exceptions}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs48 When the program detects an error, the program can create an instance of an appropriate exception type and throw it. This is known as }{\b\dbch\af1\loch\f1\fs48 throwing}{\i\dbch\af1\loch\f1\fs48  }{\b\dbch\af1\loch\f1\fs48 an exception}{\dbch\af1\loch\f1\fs48 . Here is an example,\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f4\fs48 throw new TheException();\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f4\fs48 TheException ex = new TheException();\line throw ex;\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Throwing Exceptions Example\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi160 {\b\dbch\af1\loch\f4\fs48 /** Set a new radius */\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 public void setRadius(double newRadius)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi575 {\b\dbch\af1\loch\f4\fs48 throws IllegalArgumentException \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi160 {\b\dbch\af1\loch\f4\fs48 if (newRadius >= 0)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi575 {\b\dbch\af1\loch\f4\fs48 radius = newRadius;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi160 {\b\dbch\af1\loch\f4\fs48 else\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi575 {\b\dbch\af1\loch\f4\fs48 throw new IllegalArgumentException(\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi1013 {\b\dbch\af1\loch\f4\fs48 "Radius cannot be negative");\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 \'7d}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Catching Exceptions }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)}{\dbch\af1\loch\f1\fs40\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs40 try \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li293 {\b\dbch\af1\loch\f4\fs40 statements; // Statements that may throw exceptions\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs40 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs40 catch (Exception1 exVar1) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi293 {\b\dbch\af1\loch\f4\fs40 handler for exception1;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs40 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs40 catch (Exception2 exVar2) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi293 {\b\dbch\af1\loch\f4\fs40 handler for exception2;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs40 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs40 ...\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs40 catch (ExceptionN exVar3) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi293 {\b\dbch\af1\loch\f4\fs40 handler for exceptionN;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs40 \'7d\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Catching Exceptions }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs60\cf1 Catch or Declare Checked Exceptions}{\b\dbch\af1\loch\f1\fs64\cf1  }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Suppose p2 is defined as follows:\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs60\cf1 Catch or Declare Checked Exceptions}{\b\dbch\af1\loch\f1\fs64\cf1  }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\b\dbch\af1\loch\f1\fs64\cf1 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs64\cf1 Example: Declaring, Throwing, and Catching Exceptions\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Objective: This example demonstrates declaring, throwing, and catching exceptions by modifying the }{\b\dbch\af1\loch\f4\fs48 setRadius}{\dbch\af1\loch\f1\fs48  method in the Circle class defined in Chapter 9. The new }{\b\dbch\af1\loch\f4\fs48 setRadius}{\b\dbch\af1\loch\f1\fs48  }{\dbch\af1\loch\f1\fs48 method throws an exception if radius is negative.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 CircleWithException\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 TestCircleWithException\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Rethrowing Exceptions\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 try \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15 {\b\dbch\af1\loch\f4\fs48 statements;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 catch(TheException ex) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15 {\b\dbch\af1\loch\f4\fs48 perform operations before exits;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15 {\b\dbch\af1\loch\f4\fs48 throw ex;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 \'7d\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 The }{\b\dbch\af1\loch\f4\fs72\cf1 finally}{\b\dbch\af1\loch\f1\fs72\cf1  Clause}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403\qj {\b\dbch\af1\loch\f4\fs48 try \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15\qj {\b\dbch\af1\loch\f4\fs48 statements;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403\qj {\b\dbch\af1\loch\f4\fs48 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403\qj {\b\dbch\af1\loch\f4\fs48 catch(TheException ex)\'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15\qj {\b\dbch\af1\loch\f4\fs48 handling ex;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403\qj {\b\dbch\af1\loch\f4\fs48 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403\qj {\b\dbch\af1\loch\f4\fs48 finally \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15\qj {\b\dbch\af1\loch\f4\fs48 finalStatements;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403\qj {\b\dbch\af1\loch\f4\fs48 \'7d}{\b\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (1 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (2 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (3 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (4 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (5 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (6 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (7 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (8 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (9 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (10 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Trace a Program Execution }{\dbch\af1\loch\f1\fs40\cf1 (11 of 11)\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Cautions When Using Exceptions\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Exception handling separates error-handling code from normal programming tasks, thus making programs easier to read and to modify. Be aware, however, that exception handling usually requires more time and resources because it requires instantiating a new exception object, rolling back the call stack, and propagating the errors to the calling methods.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 When to Throw Exceptions}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 An exception occurs in a method. If you want the exception to be processed by its caller, you should create an exception object and throw it. If you can handle the exception in the method where it occurs, there is no need to throw it}{\dbch\af1\loch\f1\fs48 .\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 When to Use Exceptions }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs36 When should you use the try-catch block in the code? You should use it to deal with unexpected error conditions. Do not use it to deal with simple, expected situations. For example, the following code\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs36 try \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15 {\b\dbch\af1\loch\f4\fs36 System.out.println(refVar.toString());\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs36 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs36 catch (NullPointerException ex) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15 {\b\dbch\af1\loch\f4\fs36 System.out.println("refVar is null");\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs36 \'7d\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 When to Use Exceptions }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs48 is better to be replaced by\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 if (refVar != null)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15 {\b\dbch\af1\loch\f4\fs48 System.out.println(refVar.toString());\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 else\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15 {\b\dbch\af1\loch\f4\fs48 System.out.println("refVar is null");\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Defining Custom Exception Classes\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Use the exception classes in the A}{\dbch\af1\loch\f1\fs2   }{\dbch\af1\loch\f1\fs48 P}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 I whenever possible.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Define custom exception classes if the predefined classes are not sufficient.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\pntext\pard\dbch\af1\loch\f1\fs48 \'95\tab}{\*\pn\pnlvlblt\pnf1\pnfs48{\pntxtb \'95}}{\dbch\af1\loch\f1\fs48 Define custom exception classes by extending Exception or a subclass of Exception.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Custom Exception Class Example\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 In Listing 13.8, the }{\b\dbch\af1\loch\f4\fs48 setRadius}{\dbch\af1\loch\f1\fs48  method throws an exception if the radius is negative. Suppose you wish to pass the radius to the handler, you have to create a custom exception class.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 InvalidRadiusException\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 CircleWithRadiusException\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 TestCircleWithRadiusException\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Assertions\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 An assertion is a Java statement that enables you to assert an assumption about your program. An assertion contains a Boolean expression that should be true during program execution. Assertions can be used to assure program correctness and avoid logic errors.}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Declaring Assertions\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 An }{\b\dbch\af1\loch\f4\fs48 assertion}{\b\dbch\af1\loch\f1\fs48  }{\dbch\af1\loch\f1\fs48 is declared using the new Java keyword }{\b\dbch\af1\loch\f4\fs48 assert}{\dbch\af1\loch\f1\fs48  in J}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 D}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 K 1.4 as follows:\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs48 assert assertion; }{\dbch\af1\loch\f1\fs48 or\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs48 assert assertion : detailMessage}{\b\i\dbch\af1\loch\f4\fs48 ;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 where }{\dbch\af1\loch\f4\fs48 a}{\b\dbch\af1\loch\f4\fs48 ssert}{\dbch\af1\loch\f4\fs48 ion}{\dbch\af1\loch\f1\fs48  is a Boolean expression and }{\b\dbch\af1\loch\f4\fs48 detailMessage}{\dbch\af1\loch\f1\fs48  is a primitive-type or an Object value.}{\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Executing Assertions\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs44 When an assertion statement is executed, Java evaluates the assertion. If it is false, an }{\dbch\af1\loch\f4\fs44 AssertionError}{\dbch\af1\loch\f1\fs44  will be thrown. The }{\dbch\af1\loch\f4\fs44 AssertionError}{\dbch\af1\loch\f1\fs44  class has a no-arg constructor and seven overloaded single-argument constructors of type }{\dbch\af1\loch\f4\fs44 int, long, float, double, boolean, char, }{\dbch\af1\loch\f1\fs44 and }{\dbch\af1\loch\f4\fs44 Object.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs44 For the first assert statement with no detail message, the no-arg constructor of }{\dbch\af1\loch\f4\fs44 AssertionError}{\dbch\af1\loch\f1\fs44  is used. For the second assert statement with a detail message, an appropriate }{\dbch\af1\loch\f4\fs44 AssertionError}{\dbch\af1\loch\f1\fs44  constructor is used to match the data type of the message. Since }{\dbch\af1\loch\f4\fs44 AssertionError}{\dbch\af1\loch\f1\fs44  is a subclass of Error, when an assertion becomes false, the program displays a message on the console and exits.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Executing Assertions Example\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs48 public class AssertionDemo \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi418 {\b\dbch\af1\loch\f4\fs48 public static void main(String[] }{\b\dbch\af1\loch\f4\fs48 args}{\b\dbch\af1\loch\f4\fs48 ) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi835 {\b\dbch\af1\loch\f4\fs48 int}{\b\dbch\af1\loch\f4\fs48  }{\b\dbch\af1\loch\f4\fs48 i}{\b\dbch\af1\loch\f4\fs48 ; }{\b\dbch\af1\loch\f4\fs48 int}{\b\dbch\af1\loch\f4\fs48  sum = 0;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi835 {\b\dbch\af1\loch\f4\fs48 for (}{\b\dbch\af1\loch\f4\fs48 i}{\b\dbch\af1\loch\f4\fs48  = 0; }{\b\dbch\af1\loch\f4\fs48 i}{\b\dbch\af1\loch\f4\fs48  < 10; }{\b\dbch\af1\loch\f4\fs48 i}{\b\dbch\af1\loch\f4\fs48 ++) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi1278 {\b\dbch\af1\loch\f4\fs48 sum += }{\b\dbch\af1\loch\f4\fs48 i}{\b\dbch\af1\loch\f4\fs48 ;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi835 {\b\dbch\af1\loch\f4\fs48 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi835 {\b\dbch\af1\loch\f4\fs48\cf3 assert }{\b\dbch\af1\loch\f4\fs48\cf3 i}{\b\dbch\af1\loch\f4\fs48\cf3  == 10;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li835 {\b\dbch\af1\loch\f4\fs48\cf3 assert sum > 10 && sum < 5 * 10 : "sum is " + sum;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi418 {\b\dbch\af1\loch\f4\fs48 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs48 \'7d\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs68\cf1 Compiling Programs With Assertions\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs48 Since }{\b\dbch\af1\loch\f4\fs48 assert}{\dbch\af1\loch\f4\fs48  }{\dbch\af1\loch\f1\fs48 is a new Java keyword introduced in J}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 D}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 K 1.4, you have to compile the program using a J}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 D}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 K 1.4 compiler. Furthermore, you need to include the switch }{\dbch\af1\loch\f1\fs48\cf3 \'96source 1.4 }{\dbch\af1\loch\f1\fs48 in the compiler command as follows:\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs48\cf3 javac}{\b\dbch\af1\loch\f4\fs48\cf3  \'96source 1.4 AssertionDemo.java\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f1\fs32 Note: }{\dbch\af1\loch\f1\fs32 If you use J}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs32 D}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs32 K 1.5, there is no need to use the \'96source 1.4 option in the command.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Running Programs With Assertions}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs48 By default, the assertions are disabled at runtime. To enable it, use the switch \'96enableassertions, or \'96ea for short, as follows:\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs48 java \'96}{\b\dbch\af1\loch\f4\fs48 ea}{\b\dbch\af1\loch\f4\fs48  AssertionDemo\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs48 Assertions can be selectively enabled or disabled at class level or package level. The disable switch is \'96disableassertions or \'96da for short. For example, the following command enables assertions in package }{\b\dbch\af1\loch\f4\fs48 package1}{\dbch\af1\loch\f1\fs48  and disables assertions in class }{\b\dbch\af1\loch\f4\fs48 Class1}{\dbch\af1\loch\f1\fs48 .\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs48 java \'96ea:package1 \'96da:Class1 AssertionDemo\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs56\cf1 Using Exception Handling or Assertions}{\b\dbch\af1\loch\f1\fs64\cf1  }{\dbch\af1\loch\f1\fs40\cf1 (1 of 4)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Assertion should not be used to replace exception handling. Exception handling deals with unusual circumstances during program execution. Assertions are to assure the correctness of the program. Exception handling addresses robustness and assertion addresses correctness. Like exception handling, assertions are not used for normal tests, but for internal consistency and validity checks. Assertions are checked at runtime and can be turned on or off at startup time.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs56\cf1 Using Exception Handling or Assertions}{\b\dbch\af1\loch\f1\fs64\cf1  }{\dbch\af1\loch\f1\fs40\cf1 (2 of 4)}{\b\dbch\af1\loch\f1\fs64\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs48 Do not use assertions for argument checking in public methods}{\dbch\af1\loch\f1\fs48 . Valid arguments that may be passed to a public method are considered to be part of the method\'92s contract. The contract must always be obeyed whether assertions are enabled or disabled. For example, the following code in the Circle class should be rewritten using exception handling.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 public void setRadius(double newRadius) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15 {\b\dbch\af1\loch\f4\fs48 assert newRadius >= 0;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi15 {\b\dbch\af1\loch\f4\fs48 radius = newRadius;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 \'7d\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs56\cf1 Using Exception Handling or Assertions}{\b\dbch\af1\loch\f1\fs64\cf1  }{\dbch\af1\loch\f1\fs40\cf1 (3 of 4)}{\b\dbch\af1\loch\f1\fs40\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\b\dbch\af1\loch\f1\fs48 Use assertions to reaffirm assumptions}{\dbch\af1\loch\f1\fs48 . This gives you more confidence to assure correctness of the program. A common use of assertions is to replace assumptions with assertions in the code.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs56\cf1 Using Exception Handling or Assertions}{\b\dbch\af1\loch\f1\fs64\cf1  }{\dbch\af1\loch\f1\fs40\cf1 (4 of 4)}{\b\dbch\af1\loch\f1\fs64\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs48 Another good use of assertions is place assertions in a switch statement without a default case. For example,\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 switch (month) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li698 {\b\dbch\af1\loch\f4\fs48 case 1: ... ; break;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li698 {\b\dbch\af1\loch\f4\fs48 case 2: ... ; break;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li698 {\b\dbch\af1\loch\f4\fs48 ...\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li698 {\b\dbch\af1\loch\f4\fs48 case 12: ... ; break;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li698 {\b\dbch\af1\loch\f4\fs48 default: assert false : "Invalid month: " + month\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\b\dbch\af1\loch\f4\fs48 \'7d\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 The }{\b\dbch\af1\loch\f4\fs72\cf1 File}{\b\dbch\af1\loch\f1\fs72\cf1  Class\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 The }{\b\dbch\af1\loch\f4\fs48 File}{\dbch\af1\loch\f1\fs48  class is intended to provide an abstraction that deals with most of the machine-dependent complexities of files and path names in a machine-independent fashion. The filename is a string. The }{\b\dbch\af1\loch\f4\fs48 File}{\dbch\af1\loch\f1\fs48  class is a wrapper class for the file name and its directory path.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs64\cf1 Obtaining File Properties and Manipulating File\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Problem: Explore File Properties\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 Objective: Write a program that demonstrates how to create files in a platform-independent way and use the methods in the File class to obtain their properties. The following figures show a sample run of the program on Windows and on Unix.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 TestFileClass\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Text I/O}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs48 A }{\b\dbch\af1\loch\f4\fs48 File}{\b\dbch\af1\loch\f1\fs48  }{\dbch\af1\loch\f1\fs48 object encapsulates the properties of a file or a path, but does not contain the methods for reading/writing data from/to a file. In order to perform I/O, you need to create objects using appropriate Java I/O classes. The objects contain the methods for reading/writing data from/to a file. This section introduces how to read/write strings and numeric values from/to a text file using the }{\b\dbch\af1\loch\f4\fs48 Scanner}{\dbch\af1\loch\f1\fs48  and }{\b\dbch\af1\loch\f4\fs48 PrintWriter}{\dbch\af1\loch\f1\fs48  classes.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Writing Data Using }{\b\dbch\af1\loch\f4\fs72\cf1 PrintWriter}{\b\dbch\af1\loch\f4\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 WriteData}{\ul\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Try-With-Resources\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs48 Programmers often forget to close the file. J}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 D}{\dbch\af1\loch\f1\fs2  }{\dbch\af1\loch\f1\fs48 K 7 provides the followings new try-with-resources syntax that automatically closes the files.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\b\dbch\af1\loch\f4\fs48 try}{\dbch\af1\loch\f4\fs48  (declare and create resources) \'7b\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0\fi278 {\dbch\af1\loch\f4\fs48 Use the resource to process the file;\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f4\fs48 \'7d\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs48 WriteDataWithAutoClose\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Reading Data Using }{\b\dbch\af1\loch\f4\fs72\cf1 Scanner}{\b\dbch\af1\loch\f4\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403\qc {\ul\dbch\af1\loch\f1\fs48 ReadData}{\ul\dbch\af1\loch\f1\fs48 \par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Problem: }{\b\dbch\af1\loch\f4\fs72\cf1 Replacing Text}{\b\dbch\af1\loch\f4\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs32 Write a class named }{\b\dbch\af1\loch\f4\fs32 ReplaceText}{\dbch\af1\loch\f1\fs32  that replaces a string in a text file with a new string. The filename and strings are passed as command-line arguments as follows:}{\ul\dbch\af1\loch\f1\fs32 \par 
+}\pard\plain\ltrpar\s3\li1440\loch\af1\dbch\f1\fs28\cf2\lang1033\li1168\fi-363 {\dbch\af1\loch\f4\fs32 java ReplaceText sourceFile targetFile oldString newString\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs32 For example, invoking}{\ul\dbch\af1\loch\f1\fs32 \par 
+}\pard\plain\ltrpar\s3\li1440\loch\af1\dbch\f1\fs28\cf2\lang1033\li1168\fi-363 {\dbch\af1\loch\f4\fs32 java ReplaceText FormatString.java t.txt StringBuilder StringBuffer\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs32 replaces all the occurrences of }{\b\dbch\af1\loch\f4\fs32 StringBuilder}{\dbch\af1\loch\f1\fs32  by }{\b\dbch\af1\loch\f4\fs32 StringBuffer}{\dbch\af1\loch\f1\fs32  in FormatString.java and saves the new file in t.txt.\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li403\fi-403 {\ul\dbch\af1\loch\f1\fs32 ReplaceText\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Reading Data From the Web }{\dbch\af1\loch\f1\fs40\cf1 (1 of 2)\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li0 {\dbch\af1\loch\f1\fs48 Just like you can read data from a file on your computer, you can read data from a file on the Web.\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Reading Data From the Web }{\dbch\af1\loch\f1\fs40\cf1 (2 of 2)}{\b\dbch\af1\loch\f1\fs72\cf1 \par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs40 URL }{\dbch\af1\loch\f4\fs40 url}{\dbch\af1\loch\f4\fs40  = }{\b\dbch\af1\loch\f4\fs40 new}{\dbch\af1\loch\f4\fs40  URL(}{\b\dbch\af1\loch\f4\fs40 "www.google.com/index.html"}{\dbch\af1\loch\f4\fs40 );\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f1\fs40 After a }{\b\dbch\af1\loch\f4\fs40 URL}{\dbch\af1\loch\f1\fs40  object is created, you can use the }{\b\dbch\af1\loch\f4\fs40 openStream()}{\dbch\af1\loch\f4\fs40  }{\dbch\af1\loch\f1\fs40 method defined in the }{\b\dbch\af1\loch\f4\fs40 URL}{\dbch\af1\loch\f1\fs40  class to open an input stream and use this stream to create a }{\b\dbch\af1\loch\f4\fs40 Scanner}{\dbch\af1\loch\f1\fs40  object as follows:\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\dbch\af1\loch\f4\fs40 Scanner input = }{\b\dbch\af1\loch\f4\fs40 new}{\dbch\af1\loch\f4\fs40  Scanner(url.openStream());\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li1 {\ul\dbch\af1\loch\f1\fs40 ReadFileFromURL\par 
+}\pard\plain\ltrpar\s1\loch\af1\dbch\f1\fs32\cf2\lang1033 {\b\dbch\af1\loch\f1\fs72\cf1 Copyright\par 
+}\pard\plain\ltrpar\s2\li720\loch\af1\dbch\f1\fs28\cf2\lang1033\li160 {\b\dbch\af1\loch\f1\fs32 This work is protected by United States copyright laws and is provided solely for the use of instructors in teaching their courses and assessing student learning. Dissemination or sale of any part of this work (including on the World Wide Web) will destroy the integrity of the work and is not permitted. The work and materials from it should never be made available to students except by instructors using the accompanying text in their classes. All recipients of this work are expected to abide by these restrictions and to honor the intended pedagogical purposes and the needs of other instructors who rely on these materials.\par 
+}
+}
